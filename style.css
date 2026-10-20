@@ -1,0 +1,300 @@
+
+@layer base{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: rgb(245, 243, 237);
+}
+main{
+    height:100%;width:100%;
+
+ background: rgb(245, 243, 237);}
+
+#section-1{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+   
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:12px 20px;
+    padding-bottom: 20px;
+   
+}
+.nav-left{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.nav-centre{
+    display:flex;
+    gap:20px;
+    align-items: center;
+
+
+}
+
+
+
+
+.nav-right button{
+
+
+
+border:none;
+height:30px;
+width:60px;
+border-radius: 120px;
+
+cursor:pointer;
+
+}
+
+
+
+.hero-div{
+    flex:1; 
+    width:100%;
+    padding-left:50px;
+    padding-right:30px;
+    padding-top:20px;
+   
+    display:grid;
+    grid-template-columns:.7fr 0.1fr 1.2fr;
+     grid-template-rows: 20% 25% 15% 10% 20%;
+    grid-template-areas:
+  "  hero-left-1 middle-hero hero-right"
+   " hero-left-2 middle-hero hero-right"
+   " hero-left-3 middle-hero hero-right"
+    "hero-left-4 middle-hero hero-right"
+   " hero-left-5 middle-hero hero-right"
+    
+}
+.hero-right{
+   
+    grid-area:hero-right;
+   
+}
+.hero-img{
+    height:100%;
+    width:100%;
+    border-radius: 30px;
+   
+ background-image: url(image_3c322bac.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.hero-left-1{
+   
+    grid-area:hero-left-1;
+}
+
+.hero-left-2{
+    
+    grid-area:hero-left-2;
+}
+
+.hero-left-3{
+   
+    grid-area:hero-left-3
+}
+
+.hero-left-4{
+   
+    grid-area:hero-left-4;
+}
+
+.hero-left-5{
+  
+    grid-area:hero-left-5;
+}
+
+.button{
+  border:none;
+  font-size: 13px;
+  padding:2% 2%;
+border-radius: 120px;
+cursor:pointer;
+}
+
+.hero-right{
+}
+
+
+
+
+
+
+@media (max-width:642px) {
+    .nav-centre{
+        display:none;
+    }
+}
+
+@media (max-width:600px) {
+    .hero-div{
+    flex:1; 
+    width:100vw;
+    height:100vh;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%;
+   
+    background-color:blue;
+    overflow:hidden;
+    /* background-image: url(image_3c322bac.jpg);
+   background-size:cover;
+   image-position-center; */
+   
+    display:grid;
+     grid-template-columns:1fr;
+     grid-template-rows: 22% 27% 17% 12% 22%;
+    grid-template-areas:
+  "  hero-left-1  "
+   " hero-left-2 "
+   " hero-left-3  "
+    "hero-left-4  "
+   " hero-left-5  "
+    
+}
+
+
+
+
+}
+
+
+#section-2{
+    width:100%;
+}
+.section-2-main{
+    height:100%;
+    width:100%;
+    display:grid;
+  padding:2% 3%;
+   
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr;
+    
+   
+}
+.s2x,.s2y,.s2z,.s2w{
+    
+    width:320px;
+    }
+
+.section-2-main img {
+    width: 310px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+@media (max-width:1107px) {
+    .section-2-main{
+    height:100%;
+    width:100%;
+    display:grid;
+  gap:20px;
+    padding:2% 3%;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-right: 10px;
+   
+}
+.s2x,.s2y,.s2z,.s2w{
+    
+    width:100%;
+    }
+}
+
+
+
+
+
+#section-3{
+    height:130vh;
+    width:100%;
+    /* background-color: crimson; */
+}
+
+.section-3-main{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    grid-template-rows: 15% 5% 40% 40%;
+    gap:30px;
+    padding:10px 50px;
+    grid-template-areas: 
+    "s3-top s3-top s3-top s3-top"
+    "s3-nav s3-nav s3-nav s3-nav"
+    "top-villa top-apartment top-mansion top-cottage"
+    "bottom-villa bottom-apartment bottom-mansion bottom-cottage" ;
+}
+.s3-top{
+    grid-area:s3-top;
+   
+
+}
+
+.s3-nav{
+    grid-area:s3-nav;
+}
+
+.top-villa{
+    grid-area:top-villa;
+   
+} 
+
+.top-apartment{grid-area:top-apartment;} 
+
+.top-mansion{grid-area:top-mansion;} 
+
+.top-cottage{grid-area:top-cottage;}
+
+.bottom-villa{
+    grid-area:bottom-villa;
+} 
+.bottom-apartment{grid-area:bottom-apartment;} 
+.bottom-mansion{grid-area:bottom-mansion;} 
+.bottom-cottage{grid-area:bottom-cottage;}
+
+
+ .section-3-main>*{
+ background: rgb(242, 239, 234);
+    border-radius:20px;
+}
+   /* so empty items still show */
+ 
+
+
+.section-3-main img {
+    text-align:center;
+    width: 310px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.xyz{
+    margin-top: 100px;
+}
+
+
+.bookNow{
+
+
+}
